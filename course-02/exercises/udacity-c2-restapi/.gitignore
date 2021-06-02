@@ -11,6 +11,8 @@ log.txt
 *.sublime-workspace
 .vscode/
 npm-debug.log*
+database_credentials.txt
+environment_variables.txt
 
 .idea/
 .ionic/

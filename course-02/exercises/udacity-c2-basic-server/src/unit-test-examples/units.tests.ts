@@ -1,4 +1,4 @@
-import { add, divide } from './units';
+import { add, divide, concat } from './units';
 
 import { expect } from 'chai';
 import 'mocha';
@@ -31,6 +31,19 @@ describe('divide', () => {
 
   it('should throw an error if div by zero', () => {
     expect(()=>{ divide(5,0) }).to.throw('div by 0')
+  });
+
+});
+
+describe('concat', () => {
+
+  it('it should concatenate two strings', () => {
+    const result = concat("dog","house");
+    expect(result).to.equal("doghouse");
+  });
+
+  it('should throw an error if missing a string', () => {
+    expect(()=>{ concat("","Hi") }).to.throw('empty string')
   });
 
 });
